@@ -8,8 +8,8 @@ import Information from "./Information";
 
 function Homepage() {
   return (
-    <div className="row pt-5 justify-content-center">
-      <div className="col-3 pr-3 ">
+    <div className="row pt-3 justify-content-center">
+      <div className="col-3 pr-3 pt-2">
         <Information />
       </div>
       <div style={{ width: "10px" }} />
