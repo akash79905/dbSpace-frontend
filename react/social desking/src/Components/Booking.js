@@ -15,45 +15,69 @@ function Booking() {
   });
 
   const SubmitHandle = (e) => {
-    //e.preventDefaults();
+    console.log("called");
+    // e.preventDefaults();
+    alert(JSON.stringify(searchDetails));
     console.log(searchDetails);
   };
 
   const handleInput = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-
-    console.log(name, value);
     setSearchDetails({ ...searchDetails, [name]: value });
   };
 
   return (
     <div>
       <div style={{ height: "100px" }}>
-        <form className="row" action="">
+        <form className="row">
           <div className="col">
             <label htmlFor="date" className="d-block">
               Date
             </label>
-            <input style={{ width: "100%" }} value={searchDetails.date} onChange={handleInput} type="date" name="date" id="date" />
+            <input
+              style={{ width: "100%" }}
+              value={searchDetails.date}
+              onChange={handleInput}
+              type="date"
+              name="date"
+              id="date"
+            />
           </div>
 
           <div className="col">
             <label htmlFor="officeRegion" className="d-block">
               Office
             </label>
-            <input type="text" value={searchDetails.officeRegion} name="officeRegion" onChange={handleInput} id="officeRegion" />
+            <input
+              type="text"
+              value={searchDetails.officeRegion}
+              name="officeRegion"
+              onChange={handleInput}
+              id="officeRegion"
+            />
           </div>
 
           <div className="col">
             <label htmlFor="floor" className="d-block">
               Floor
             </label>
-            <input type="text" value={searchDetails.floor} name="floor" onChange={handleInput} id="floor" />
+            <input
+              type="text"
+              value={searchDetails.floor}
+              name="floor"
+              onChange={handleInput}
+              id="floor"
+            />
           </div>
 
           <div className="col" style={{}}>
-            <button onClick={SubmitHandle} className="submitButton" type="submit">
+            <button
+              style={{}}
+              className="submitButton"
+              type="submit"
+              onClick={SubmitHandle}
+            >
               <span style={{ paddingRight: "20px" }}>Search</span>
               <ArrowForwardIcon style={{ fill: "white" }} />
             </button>
