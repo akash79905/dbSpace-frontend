@@ -1,5 +1,6 @@
 import OfficeMap from "./office";
 import React, { useState } from "react";
+import "../App.css";
 
 function Map() {
   const data = [
@@ -57,7 +58,7 @@ function Map() {
     },
     {
       id: 4,
-      chairDirection: "south",  
+      chairDirection: "south",
       x: 3,
       y: 0,
       equipments: [
@@ -223,28 +224,28 @@ function Map() {
   const [tables, updateTables] = useState(data);
 
   return (
-    <OfficeMap
-      data={tables}
-      onSelect={(desk) => {
-        console.log(desk);
+    <div className="map">
+      <OfficeMap
+        data={tables}
+        onSelect={(desk) => {
+          console.log(desk);
 
-        const arr = Array();
-        tables.forEach((t) => {
-          if (t.id == desk.id) {
-            t.equipments.forEach((e) =>
-              e.type == "chair" ? (e.type = "chair-na") : null
-            );
-          }
-          arr.push(t);
-        });
-        updateTables(arr);
-      }}
-      onMove={console.log}
-      editMode={true}
-      showNavigator={true}
-      horizontalSize={5}
-      verticalSize={3}
-    />
+          const arr = [];
+          tables.forEach((t) => {
+            if (t.id === desk.id) {
+              t.equipments.forEach((e) => (e.type === "chair" ? (e.type = "chair-na") : null));
+            }
+            arr.push(t);
+          });
+          updateTables(arr);
+        }}
+        onMove={console.log}
+        editMode={true}
+        showNavigator={true}
+        horizontalSize={5}
+        verticalSize={3}
+      />
+    </div>
   );
 }
 

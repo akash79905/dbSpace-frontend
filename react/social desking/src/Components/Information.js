@@ -29,13 +29,11 @@ function Information() {
     <div>
       <BookingItemCard showComponent={showComponent} setShowComponent={setShowComponent} booking={bookings[index]} />
 
-      <h1 className="title" style={{ color: "#001BAB", fontWeight: "bold" }}>
+      <h1 className="title bold" style={{ color: "#001BAB" }}>
         dbSpace
       </h1>
 
-      <h5 style={{ fontWeight: "bold" }}>Your Bookings</h5>
-
-      <div className="text-secondary mt-5 mb-2" style={{ fontWeight: "bold" }}>
+      <div className="text-secondary mt-5 mb-3" style={{ fontWeight: "bold" }}>
         YOUR UPCOMING BOOKINGS
       </div>
 
