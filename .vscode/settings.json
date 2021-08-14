@@ -1,9 +1,0 @@
-{
-  "emmet.excludeLanguages": ["markdown"],
-  "emmet.syntaxProfiles": {
-    "javascript": "jsx"
-  },
-  "emmet.includeLanguages": {
-    "javascript": "html"
-  }
-}
