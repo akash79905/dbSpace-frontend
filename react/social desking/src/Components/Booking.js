@@ -30,8 +30,8 @@ function Booking() {
   };
 
   return (
-    <div>
-      <div style={{ height: "100px" }}>
+    <div className="" style={{ margin: "0", padding: "0", height: "100%" }}>
+      <div style={{ height: "100px" }} className="">
         <form className="row mt-5">
           <div className="col">
             <label htmlFor="date" className="d-block text-secondary mb-2 bold">
@@ -61,26 +61,26 @@ function Booking() {
             </div>
           </div>
         </form>
+      </div>
 
-        <Map />
+      <Map className="map" style={{ height: "100%" }} />
 
-        <div className="mt-2 row">
-          <div className="text-secondary bold col-3 text-center mt-2 pt-1"> SELECTED DESK</div>
-          <div className="col">
-            <div style={{ paddingLeft: "-15px" }} className="box-color bold text-center">
-              37
-            </div>
+      <div className="mt-2 row" style={{ height: "20%" }}>
+        <div className="text-secondary bold col-3 text-center mt-2 pt-1"> SELECTED DESK</div>
+        <div className="col">
+          <div style={{ paddingLeft: "-15px" }} className="box-color bold text-center">
+            37
           </div>
+        </div>
 
-          <div className="text-secondary bold col mt-2 pt-1"> NO. OF DAYS</div>
-          <input className="bold col box-color" type="number" value={searchDetails.days} name="days" onChange={handleInput} id="days" />
+        <div className="text-secondary bold col mt-2 pt-1"> NO. OF DAYS</div>
+        <input className="bold col box-color" type="number" value={searchDetails.days} name="days" onChange={handleInput} id="days" />
 
-          <div className="col"></div>
-          <div className="col">
-            <button className="text-white bold" style={{ width: "100px", height: "40px", borderRadius: "20px", backgroundColor: "#006400" }}>
-              Submit
-            </button>
-          </div>
+        <div className="col"></div>
+        <div className="col">
+          <button className="text-white bold" style={{ width: "100px", height: "40px", borderRadius: "20px", backgroundColor: "#006400" }}>
+            Submit
+          </button>
         </div>
       </div>
     </div>

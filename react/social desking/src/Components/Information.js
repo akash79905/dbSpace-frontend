@@ -1,10 +1,10 @@
-import React from "react";
+import { React } from "react";
 import { useState } from "react";
 import "../App.css";
 import dateFormat from "dateformat";
 import BookingItemCard from "./BookingItemCard";
 
-function Information() {
+const Information = (update) => {
   const [bookings, setBookings] = useState([
     { officeRegion: "Yerwada", StartDate: 1628965800000, DeskNo: "27", Floor: "7", City: "Pune", EndDate: 1628965845600 },
     { officeRegion: "Yerwada", StartDate: 1629397800000, DeskNo: "27", Floor: "7", City: "Pune", EndDate: 1628965845600 },
@@ -52,6 +52,6 @@ function Information() {
       </div>
     </div>
   );
-}
+};
 
 export default Information;
