@@ -11,7 +11,13 @@ function Landing() {
   var handleSubmit = () => {
     window.localStorage.setItem("user", JSON.stringify(email));
     setEmail("");
+
+    let isAdmin = false;
     let path = `/homepage`;
+
+    if (isAdmin) {
+      path += "/admin";
+    }
     history.push(path);
   };
   return (
